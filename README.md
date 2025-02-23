@@ -33,6 +33,7 @@ Job Tracker is a web application that allows users to track their job applicatio
   - `PUT /api/myjobs/{id}`: Update a specific job application.
   - `DELETE /api/myjobs/{id}`: Delete a specific job application.
 - **Testing**: PHPUnit tests for backend functionality.
+- **Docker**: Docker support for easy setup and deployment.
 
 ## Installation
 
@@ -42,6 +43,7 @@ Job Tracker is a web application that allows users to track their job applicatio
 - Composer
 - Node.js
 - npm or yarn
+- Docker
 
 ### Backend
 
@@ -50,4 +52,32 @@ Job Tracker is a web application that allows users to track their job applicatio
    git clone https://github.com/yourusername/job-tracker.git
    cd job-tracker/backend
    cd job-tracker/frontend
+   ```
+
+### Running with Docker
+
+1. Build and run the Docker containers for backend:
+
+   ```sh
+   cd job-tracker/backend
+   docker compose build
+   docker compose up
+   ```
+
+2. Build and run the Docker containers for frontend:
+
+   ```sh
+   cd job-tracker/frontend
+   docker compose build
+   docker compose up
+   ```
+
+3. Access the application:
+
+   - Frontend: `http://localhost:5173`
+   - Backend: `http://localhost:8080`
+
+4. To stop the containers:
+   ```sh
+   docker-compose down
    ```
