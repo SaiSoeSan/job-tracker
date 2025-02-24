@@ -49,7 +49,7 @@ Job Tracker is a web application that allows users to track their job applicatio
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/job-tracker.git
+   git clone https://github.com/SaiSoeSan/job-tracker.git
    cd job-tracker/backend
    cd job-tracker/frontend
    ```
