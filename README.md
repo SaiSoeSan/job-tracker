@@ -2,7 +2,7 @@
 
 Job Tracker is a web application that allows users to track their job applications. It includes features for both the frontend and backend.
 
-## Screenshot
+## Demo
 
 ![](https://github.com/SaiSoeSan/job-tracker/blob/main/screenshot/demo.gif)
 
