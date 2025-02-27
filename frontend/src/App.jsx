@@ -47,6 +47,23 @@ const App = () => {
     }
   }, [isAuthenticated]);
 
+  useEffect(() => {
+    const interceptor = axiosInstance.interceptors.response.use(
+      (response) => response,
+      (error) => {
+        if (error.response && error.response.status === 401) {
+          localStorage.clear();
+          setIsAuthenticated(false);
+        }
+        return Promise.reject(error);
+      }
+    );
+
+    return () => {
+      axiosInstance.interceptors.response.eject(interceptor);
+    };
+  }, []);
+
   const handleAddJob = (newJob) => {
     setJobs((prevJobs) => [newJob, ...prevJobs]);
   };

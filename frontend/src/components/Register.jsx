@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axiosInstance from "../api/axiosConfig";
 
 const Register = () => {
@@ -6,6 +7,7 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
+  const navigate = useNavigate();
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -16,6 +18,7 @@ const Register = () => {
         password,
       });
       setMessage(response.data.message);
+      navigate("/login");
     } catch (error) {
       setMessage("Registration failed");
     }
